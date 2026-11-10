@@ -1,0 +1,38 @@
+# Build trees. The plugin bundles, fetched SDKs (clap, clap-wrapper, the VST3
+# and AudioUnit SDKs) and CMake's own scratch all live under these.
+build/
+build-*/
+cmake-build-*/
+out/
+
+# CMake, in case someone configures in the source tree by accident.
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+_deps/
+install_manifest.txt
+compile_commands.json
+.cache/
+
+# Built plugin bundles, wherever they land. They are directories, not files.
+*.clap/
+*.vst3/
+*.component/
+
+# Rendered audio: talkit-render writes these, and they are never worth keeping.
+*.wav
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
